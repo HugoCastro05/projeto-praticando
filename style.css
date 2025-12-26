@@ -33,7 +33,7 @@ body {
     transition: .2s;
 }
 
-button:hover {
+button:hover, form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #00ff08;
     transform: scale(1.05);
     transition: 0.2s;
@@ -87,7 +87,7 @@ header li {
     padding: 40px 4%;
 }
 
-.flex {
+.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
@@ -97,6 +97,10 @@ header li {
     color: white;
     font-size: 42px;
     line-height: 40px;
+}
+
+.topo-do-site h1 span {
+    color: #00ff08;
 }
 
 .topo-do-site p {
@@ -183,13 +187,230 @@ section.sobre .flex {
     text-align: justify;
 }
 
-.txt-sobre .btn-social button {
+.btn-social button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 0;
     background-color: #00ff08;
     font-size: 25px;
-    margin: 5px 10px;
+    margin: 0px 8px;
     cursor: pointer;
+    transition: .2s ;
+}
+
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.123);
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.img-port {
+    width: 300px;
+    height: 500px;
+    background-color: #00ff08;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 7s;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/*formulario */
+.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+form input, textarea {
+    width: 100%;
+    background-color: rgb(71, 71, 71);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+
+textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn.enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #00ff08;
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+    display: block;
+    margin: auto;
+}
+
+/* ESTILO DO RODAPÉ*/
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.123);
+}
+
+footer .flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #00ff08;
+}
+
+.line-footer p i {
+    color: #00ff08;
+    margin-right:10px;
+    font-size: 22px;
+}
+
+.line-footer a {
+    color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+     .flex {
+        flex-direction: column;
+    }
+
+     h2.titulo {
+        font-size: 33px;
+        line-height: 35px;
+    }
+    
+    /*header*/
+     .menu-desktop, .btn-contato {
+        display: none;
+    }
+     /*topo do site*/
+
+     .topo-do-site .flex {
+        gap: 50px;
+    }
+
+     .topo-do-site {
+        padding: 20px 6%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+    }
+
+    .topo-do-site img {
+        width: 100%;
+    }
+
+    /*especialidades*/
+    .especialidades {
+        padding: 40px 6%;
+    }
+
+    /*sobre*/
+    .sobre .flex {
+        flex-direction: column-reverse;
+    }
+
+    .sobre {
+        padding: 80px 6%;
+    }   
+
+    .txt-sobre h2 {
+        font-size: 38px;
+        line-height: 38px;
+        
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /*portfolio*/
+    .portfolio {
+        padding: 80px 6%;
+    }
+
+    .img-port {
+        width: 90%;
+        max-width: 360px;
+        height: 550px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 50px;
+    }
+
+    /*formulario*/
+    form {
+        max-width: 400px;
+    }
+
+    /*rodapé*/
+
+    footer .flex {
+        gap: 20px;
+    }
+    .line-footer {
+        text-align: center;
+    }
 }
